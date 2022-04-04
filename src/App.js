@@ -1,7 +1,14 @@
 import React from "react";
 
-const App = () => {
-  return <div>App</div>;
-};
+import { Header, About } from "./containers";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <About />
+    </>
+  );
+}
 
 export default App;
