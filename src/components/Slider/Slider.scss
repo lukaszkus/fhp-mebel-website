@@ -1,0 +1,17 @@
+.slider {
+  width: 100%;
+
+  list-style: none;
+  padding: 0;
+}
+
+.slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
