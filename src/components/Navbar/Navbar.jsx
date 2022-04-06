@@ -13,11 +13,13 @@ function Navbar() {
         <ul className="navbar__links">
           {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
             <li key={`link-${item}`}>
-              <a href={`#${item}`}>{item}</a>
+              <a href={`#${item}`} className="navbar__link">
+                {item}
+              </a>
             </li>
           ))}
         </ul>
-        <div className="line" />
+        <div className="navbar__line" />
       </div>
     </nav>
   );
