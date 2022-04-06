@@ -1,3 +1,25 @@
+$tablet-width: 700px;
+$desktop-sm-width: 1024px;
+$desktop-big-width: 1600px;
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (min-width: $desktop-sm-width) {
+    @content;
+  }
+}
+
+@mixin desktop-big {
+  @media (min-width: $desktop-big-width) {
+    @content;
+  }
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, About } from "./containers";
+import { Header } from "./containers";
 import { Navbar } from "./components";
 
 function App() {
@@ -8,7 +8,6 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <About />
     </>
   );
 }
