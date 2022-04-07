@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-slideshow-image";
+import { BsArrowRight } from "react-icons/bs";
 import "react-slideshow-image/dist/styles.css";
 
 import "./Slider.scss";
@@ -56,7 +57,7 @@ function Slider() {
                   href={slide.link}
                   className="slide__btn"
                 >
-                  Zobacz więcej &gt;
+                  Zobacz więcej <BsArrowRight size="1.1rem" />
                 </motion.a>
               </div>
             </div>
