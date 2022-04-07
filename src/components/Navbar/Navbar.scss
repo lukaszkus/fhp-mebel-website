@@ -2,9 +2,7 @@
 
 .navbar {
   width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
+  height: 100px;
   position: fixed;
   top: 0;
   z-index: 9999;
@@ -19,10 +17,15 @@
 
   &__container {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    gap: 1.5rem;
+
+    @include tablet {
+      gap: 2rem;
+    }
   }
 
   &__logo {
@@ -35,6 +38,14 @@
     }
   }
 
+  &__menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // background-color: aqua;
+  }
+
   &__links {
     list-style: none;
     gap: 3.5rem;
@@ -42,6 +53,10 @@
 
     @include tablet {
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 1;
+      padding-top: 1rem;
     }
   }
 
@@ -52,17 +67,29 @@
     letter-spacing: 0.5px;
   }
 
+  &__hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 1rem;
+    @include tablet {
+      display: none;
+    }
+  }
+
   &__line {
-    position: absolute;
-    bottom: 8px;
-    right: 1rem;
-    width: calc(100% - 140px);
+    width: 100%;
     height: 1px;
     background: red;
+    margin-bottom: 1.8rem;
 
     @include tablet {
-      width: calc(100% - 200px);
-      bottom: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop-big {
+      margin-bottom: 2.8rem;
     }
   }
 }

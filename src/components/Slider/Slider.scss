@@ -22,7 +22,7 @@
   }
 
   &__content {
-    height: 100vh;
+    min-height: 100vh;
     // height: calc(100vh - 100px);
     // top: 100px;
     display: flex;
@@ -34,10 +34,10 @@
     &::before {
       content: "";
       position: absolute;
-      width: 55%;
-      height: 45%;
+      width: 12rem;
+      height: 20rem;
       // top: 50%;
-      right: 0;
+
       // transform: translate(0, -50%);
       background-color: red;
       mix-blend-mode: multiply;
@@ -55,11 +55,12 @@
 
   &__title {
     position: relative;
-    font-size: 2.625rem;
+    width: 100%;
+    font-size: 2.875em;
     font-weight: 500;
     color: $clr-white;
     text-align: right;
-    padding: 2rem 1rem 2rem 0;
+    padding: 2rem 1rem 0 0;
     line-height: 1.2;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -76,25 +77,33 @@
   }
 
   &__btn {
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     text-decoration: none;
-    // padding: 16px 35px;
     padding: 10px 25px;
-
     color: $clr-white;
     border: 1px solid $clr-white;
     border-radius: 35px;
     position: relative;
+    margin: 3rem 1rem 2rem 0;
+
+    @include desktop-sm {
+      margin: 3rem 4rem 0 0;
+      padding: 16px 35px;
+    }
   }
 }
 
 .indicators {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
   gap: 1rem;
+
+  @include desktop-sm {
+    bottom: 50px;
+  }
 
   li {
     button {
