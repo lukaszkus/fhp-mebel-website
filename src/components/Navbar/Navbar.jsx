@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Hamburger from "hamburger-react";
 
 import "./Navbar.scss";
@@ -8,11 +9,14 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__container container">
-        <div className="navbar__logo">
+        <motion.div whileInView={{ opacity: [0, 1] }} className="navbar__logo">
           <img src={images.logo} alt="logo" />
-        </div>
+        </motion.div>
         <div className="navbar__menu">
-          <ul className="navbar__links">
+          <motion.ul
+            whileInView={{ opacity: [0, 1] }}
+            className="navbar__links"
+          >
             {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
               <li key={`link-${item}`}>
                 <a href={`#${item}`} className="navbar__link">
@@ -20,10 +24,13 @@ function Navbar() {
                 </a>
               </li>
             ))}
-          </ul>
-          <div className="navbar__hamburger">
+          </motion.ul>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            className="navbar__hamburger"
+          >
             <Hamburger size={28} color="#fff" label="Show menu" />
-          </div>
+          </motion.div>
           <div className="navbar__line" />
         </div>
       </div>

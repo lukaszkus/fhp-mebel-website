@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
@@ -41,12 +42,22 @@ function Slider() {
             <div
               className="slide"
               key={slide.id}
-              style={{ backgroundImage: `url(${slide.img})` }}>
+              style={{ backgroundImage: `url(${slide.img})` }}
+            >
               <div className="slide__content container">
-                <h1 className="slide__title">{slide.title}</h1>
-                <a href={slide.link} className="slide__btn">
+                <motion.h1
+                  animate={{ x: [-100, 0], opacity: [0, 1] }}
+                  className="slide__title"
+                >
+                  {slide.title}
+                </motion.h1>
+                <motion.a
+                  animate={{ x: [50, 0], opacity: [0, 1] }}
+                  href={slide.link}
+                  className="slide__btn"
+                >
                   Zobacz więcej &gt;
-                </a>
+                </motion.a>
               </div>
             </div>
           );

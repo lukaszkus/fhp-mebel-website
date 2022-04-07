@@ -18,27 +18,35 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.25);
   }
 
   &__content {
-    min-height: 100vh;
-    // height: calc(100vh - 100px);
-    // top: 100px;
+    height: calc(100vh - 70px);
+    top: 70px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
     position: relative;
 
+    @include tablet {
+      height: calc(100vh - 95px);
+      top: 95px;
+    }
+
+    @include desktop-big {
+      height: calc(100vh - 115px);
+      top: 115px;
+    }
+
     &::before {
       content: "";
       position: absolute;
       width: 12rem;
       height: 20rem;
-      // top: 50%;
-
-      // transform: translate(0, -50%);
+      top: 50%;
+      transform: translate(0, -50%);
       background-color: red;
       mix-blend-mode: multiply;
 
@@ -46,6 +54,7 @@
         height: 24rem;
         width: 24rem;
       }
+
       @include desktop-big {
         width: 27rem;
         height: 30rem;
@@ -65,12 +74,12 @@
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 
     @include tablet {
-      width: 80%;
+      max-width: 80%;
       font-size: 4.5rem;
-      padding: 2rem 4rem 0 0;
+      padding: 2rem 2rem 0 0;
     }
     @include desktop-big {
-      width: 80%;
+      min-width: 80%;
       font-size: 6rem;
       padding: 2rem 4rem 0 0;
     }
@@ -78,16 +87,17 @@
 
   &__btn {
     font-size: 0.875rem;
+    font-weight: 300;
     text-decoration: none;
     padding: 10px 25px;
     color: $clr-white;
     border: 1px solid $clr-white;
     border-radius: 35px;
     position: relative;
-    margin: 3rem 1rem 2rem 0;
+    margin: 2rem 1rem 2rem 0;
 
-    @include desktop-sm {
-      margin: 3rem 4rem 0 0;
+    @include tablet {
+      margin: 2rem 2rem 0 0;
       padding: 16px 35px;
     }
   }
