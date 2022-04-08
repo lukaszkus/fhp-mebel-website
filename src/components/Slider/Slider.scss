@@ -18,7 +18,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.1);
   }
 
   &__content {
@@ -51,8 +51,8 @@
       mix-blend-mode: multiply;
 
       @include tablet {
-        height: 24rem;
         width: 24rem;
+        height: 26rem;
       }
 
       @include desktop-big {
@@ -89,7 +89,7 @@
     font-size: 0.875rem;
     font-weight: 300;
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 12px 25px;
     color: $clr-white;
     border: 1px solid $clr-white;
     border-radius: 35px;
@@ -102,6 +102,10 @@
     @include tablet {
       margin: 2rem 2rem 0 0;
       padding: 16px 35px;
+    }
+
+    @include desktop-big {
+      margin: 2rem 4rem 0 0;
     }
   }
 }

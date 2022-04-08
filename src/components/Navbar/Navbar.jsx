@@ -15,8 +15,7 @@ function Navbar() {
         <div className="navbar__menu">
           <motion.ul
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__links"
-          >
+            className="navbar__links">
             {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
               <li key={`link-${item}`}>
                 <a href={`#${item}`} className="navbar__link">
@@ -27,11 +26,13 @@ function Navbar() {
           </motion.ul>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__hamburger"
-          >
+            className="navbar__hamburger">
             <Hamburger size={28} color="#fff" label="Show menu" />
           </motion.div>
-          <div className="navbar__line" />
+          <motion.div
+            animate={{ x: [500, 0], opacity: [0, 1] }}
+            className="navbar__line"
+          />
         </div>
       </div>
     </nav>

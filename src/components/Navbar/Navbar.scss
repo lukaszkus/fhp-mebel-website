@@ -64,6 +64,10 @@
     color: $clr-white;
     font-weight: 300;
     letter-spacing: 0.5px;
+
+    &:hover {
+      color: red;
+    }
   }
 
   &__hamburger {
