@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-slideshow-image";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowDownCircle, BsArrowRight } from "react-icons/bs";
 import "react-slideshow-image/dist/styles.css";
 
 import "./Slider.scss";
@@ -35,6 +35,16 @@ const slides = [
 ];
 
 function Slider() {
+  const motionBtn = {
+    initial: { x: 50, opacity: 0 },
+    animate: { x: 0, opacity: 0.75, transition: { duration: 0.5 } },
+    hover: { opacity: 1 },
+  };
+  const motionBtnArrow = {
+    initial: { x: 0 },
+    hover: { x: 6, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="slider">
       <Fade arrows={false} pauseOnHover={false} indicators={true}>
@@ -43,22 +53,33 @@ function Slider() {
             <div
               className="slide"
               key={slide.id}
-              style={{ backgroundImage: `url(${slide.img})` }}
-            >
+              style={{ backgroundImage: `url(${slide.img})` }}>
               <div className="slide__content container">
                 <motion.h1
                   animate={{ x: [-100, 0], opacity: [0, 1] }}
-                  className="slide__title"
-                >
+                  className="slide__title">
                   {slide.title}
                 </motion.h1>
                 <motion.a
-                  animate={{ x: [50, 0], opacity: [0, 1] }}
+                  initial="initial"
+                  animate="animate"
+                  whileHover="hover"
+                  variants={motionBtn}
                   href={slide.link}
-                  className="slide__btn"
-                >
-                  Zobacz więcej <BsArrowRight size="1.1rem" />
+                  className="slide__btn">
+                  Zobacz więcej
+                  <motion.span variants={motionBtnArrow}>
+                    <BsArrowRight size="1.1rem" />
+                  </motion.span>
                 </motion.a>
+                <motion.button
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 0.75 }}
+                  whileHover={{ y: 6, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="btn-down">
+                  <BsArrowDownCircle size="2rem" />
+                </motion.button>
               </div>
             </div>
           );

@@ -4,6 +4,7 @@
   width: 100%;
   list-style: none;
   padding: 0;
+  position: relative;
 }
 
 .slide {
@@ -91,13 +92,17 @@
     text-decoration: none;
     padding: 12px 25px;
     color: $clr-white;
-    border: 1px solid $clr-white;
+    border: 1.5px solid $clr-white;
     border-radius: 35px;
     position: relative;
     margin: 2rem 1rem 2rem 0;
 
     @include flex-center;
     gap: 10px;
+
+    span {
+      @include flex-center;
+    }
 
     @include tablet {
       margin: 2rem 2rem 0 0;
@@ -107,6 +112,22 @@
     @include desktop-big {
       margin: 2rem 4rem 0 0;
     }
+  }
+}
+
+.btn-down {
+  display: none;
+
+  @include desktop-sm {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1;
+    color: $clr-white;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
