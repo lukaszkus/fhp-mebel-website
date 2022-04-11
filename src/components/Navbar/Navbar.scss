@@ -5,7 +5,8 @@
   height: 100px;
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
+  // background-color: aqua;
 
   @include tablet {
     height: 120px;
@@ -77,6 +78,7 @@
     align-items: center;
     flex-grow: 1;
     padding-top: 1rem;
+    z-index: 9999;
     @include tablet {
       display: none;
     }
@@ -87,6 +89,7 @@
     height: 1px;
     background: $clr-accent-light;
     margin-bottom: 1.8rem;
+    z-index: 999;
 
     @include tablet {
       margin-bottom: 1.5rem;

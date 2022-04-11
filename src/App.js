@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { Header } from "./containers";
-import { Navbar, Mobilemenu } from "./components";
+import { Header, Cards } from "./containers";
+import { Navbar } from "./components";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <Navbar isOpen={isOpen} toggle={toggle} />
-      <Mobilemenu isOpen={isOpen} />
       <Header />
+      <Cards />
     </>
   );
 }

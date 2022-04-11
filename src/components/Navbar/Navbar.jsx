@@ -5,6 +5,8 @@ import Hamburger from "hamburger-react";
 import "./Navbar.scss";
 import { images } from "../../constants";
 
+import { Mobilemenu } from "../";
+
 function Navbar({ isOpen, toggle }) {
   return (
     <nav className="navbar">
@@ -15,8 +17,7 @@ function Navbar({ isOpen, toggle }) {
         <div className="navbar__menu">
           <motion.ul
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__links"
-          >
+            className="navbar__links">
             {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
               <li key={`link-${item}`}>
                 <a href={`#${item}`} className="navbar__link">
@@ -27,8 +28,7 @@ function Navbar({ isOpen, toggle }) {
           </motion.ul>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__hamburger"
-          >
+            className="navbar__hamburger">
             <Hamburger
               size={28}
               color="#fff"
@@ -41,6 +41,7 @@ function Navbar({ isOpen, toggle }) {
             animate={{ x: [500, 0], opacity: [0, 1] }}
             className="navbar__line"
           />
+          <Mobilemenu isOpen={isOpen} />
         </div>
       </div>
     </nav>
