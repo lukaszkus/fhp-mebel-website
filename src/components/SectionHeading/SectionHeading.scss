@@ -1,0 +1,24 @@
+@import "../../styles/main.scss";
+
+.heading-wrapper {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 300;
+  color: $clr-grey-light;
+  padding-bottom: 3rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-underline {
+  height: 1px;
+  background: $clr-accent-light;
+  width: 40%;
+  margin-bottom: 4rem;
+}

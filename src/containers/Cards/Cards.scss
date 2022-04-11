@@ -3,7 +3,7 @@
 .cards {
   min-height: 100vh;
   background-color: $clr-black-middle;
-  padding: 100px 0;
+  padding: 140px 0;
   color: $clr-white;
 
   &__container {
@@ -16,11 +16,5 @@
     @include desktop-sm {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-
-  .card {
-    width: 100%;
-    background-color: $clr-grey;
-    height: 300px;
   }
 }

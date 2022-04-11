@@ -139,7 +139,7 @@
   z-index: 1;
   gap: 1rem;
 
-  @include desktop-sm {
+  @include desktop-big {
     bottom: 50px;
   }
 
