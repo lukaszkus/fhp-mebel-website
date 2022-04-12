@@ -6,8 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   color: $clr-grey-light;
+  border-radius: 10px;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: rgb(55, 55, 55);
+  }
 
   &__icon {
     height: 80px;
@@ -17,7 +23,7 @@
     font-size: 1.75rem;
     font-weight: 400;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
     padding: 2rem 0 1rem 0;
     height: 100px;
 
