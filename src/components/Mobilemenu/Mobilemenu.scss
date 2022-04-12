@@ -8,7 +8,7 @@
   top: 0;
   right: 0;
   transition: 0.3s ease-in-out;
-  background-color: $clr-black-flat;
+  background-color: $clr-accent-dark;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
     list-style: none;
 
     li {
-      padding: 1.25rem 0;
+      padding: 1.5rem 0;
     }
   }
 
@@ -29,6 +29,10 @@
     color: $clr-white;
     text-decoration: none;
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
+
+    &:hover {
+      color: $clr-black-deep;
+    }
   }
 }
