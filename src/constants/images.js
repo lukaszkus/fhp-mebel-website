@@ -14,6 +14,13 @@ import remonty from "../assets/remonty.svg";
 import salon from "../assets/salon.svg";
 import szafa from "../assets/szafa.svg";
 
+//Portfolio categories
+import cat_kuchnie from "../assets/portfolio/cat_kuchnie.jpg";
+import cat_lazienki from "../assets/portfolio/cat_lazienki.jpg";
+import cat_remonty from "../assets/portfolio/cat_remonty.jpg";
+import cat_salon from "../assets/portfolio/cat_salon.jpg";
+import cat_szafy from "../assets/portfolio/cat_szafy.jpg";
+
 const images = {
   logo,
   kitchen,
@@ -25,6 +32,11 @@ const images = {
   remonty,
   salon,
   szafa,
+  cat_kuchnie,
+  cat_lazienki,
+  cat_remonty,
+  cat_salon,
+  cat_szafy,
 };
 
 export default images;

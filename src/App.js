@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Header, Cards } from "./containers";
+import { Header, Cards, Portfolio } from "./containers";
 import { Navbar } from "./components";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Navbar isOpen={isOpen} toggle={toggle} />
       <Header />
       <Cards />
+      <Portfolio />
     </>
   );
 }
