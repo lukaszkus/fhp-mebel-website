@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   z-index: 999;
-  // background-color: aqua;
+  transition: all 0.3s;
 
   @include tablet {
     height: 120px;
@@ -63,7 +63,7 @@
   &__link {
     text-decoration: none;
     color: $clr-white;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.5px;
     transition: 0.3s ease-in-out;
 
@@ -89,7 +89,6 @@
     height: 1px;
     background: $clr-accent-light;
     margin-bottom: 1.8rem;
-    z-index: 999;
 
     @include tablet {
       margin-bottom: 1.5rem;
@@ -98,5 +97,41 @@
     @include desktop-big {
       margin-bottom: 2.8rem;
     }
+  }
+}
+
+.showNavbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 60px;
+
+  @include tablet {
+    height: 80px;
+  }
+
+  @include desktop-big {
+    height: 100px;
+  }
+
+  .navbar__logo {
+    transition: 0.3s;
+    img {
+      height: 40px;
+
+      @include tablet {
+        height: 60px;
+      }
+    }
+  }
+
+  .navbar__links {
+    padding-top: 0;
+  }
+
+  .navbar__hamburger {
+    padding-top: 0;
+  }
+
+  .navbar__line {
+    display: none;
   }
 }

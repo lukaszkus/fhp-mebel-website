@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import "./Mobilemenu.scss";
+import "./MobileMenu.scss";
 
-function Mobilemenu({ isOpen }) {
+function MobileMenu({ isOpen }) {
   const menuVisibility = isOpen
     ? { opacity: "100%", top: 0 }
     : { opacity: 0, right: "-100%" };
@@ -12,8 +12,7 @@ function Mobilemenu({ isOpen }) {
     <div className="mobilemenu" style={menuVisibility}>
       <motion.ul
         whileInView={{ opacity: [0, 1] }}
-        className="mobilemenu__links"
-      >
+        className="mobilemenu__links">
         {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
           <li key={`link-${item}`}>
             <a href={`#${item}`} className="mobilemenu__link">
@@ -26,4 +25,4 @@ function Mobilemenu({ isOpen }) {
   );
 }
 
-export default Mobilemenu;
+export default MobileMenu;
