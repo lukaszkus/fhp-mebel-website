@@ -49,7 +49,7 @@ function Navbar({ isOpen, toggle }) {
               toggle={toggle}
             />
           </motion.div>
-          <MobileMenu isOpen={isOpen} />
+          <MobileMenu isOpen={isOpen} toggle={toggle} />
           <motion.div
             animate={{ x: [500, 0], opacity: [0, 1] }}
             className="navbar__line"

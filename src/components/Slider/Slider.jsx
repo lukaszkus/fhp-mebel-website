@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-slideshow-image";
-import { BsArrowDownCircle, BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import "react-slideshow-image/dist/styles.css";
 
 import "./Slider.scss";
@@ -72,14 +72,6 @@ function Slider() {
                     <BsArrowRight size="1.1rem" />
                   </motion.span>
                 </motion.a>
-                <motion.button
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 0.75 }}
-                  whileHover={{ y: 6, opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="btn-down">
-                  <BsArrowDownCircle size="2rem" />
-                </motion.button>
               </div>
             </div>
           );
