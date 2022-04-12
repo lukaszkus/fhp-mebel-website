@@ -3,6 +3,12 @@
 @import "./variables";
 @import "./mixins";
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   font-family: $ff-main;

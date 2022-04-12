@@ -7,7 +7,8 @@ function PortfolioItem({ title, img }) {
   return (
     <motion.article
       whileInView={{ opacity: [0, 1] }}
-      className="portfolio-item">
+      className="portfolio-item"
+    >
       <img className="portfolio-item__img" src={img} alt={title} />
       <div className="portfolio-item__overlay" />
       <div className="portfolio-item__text">

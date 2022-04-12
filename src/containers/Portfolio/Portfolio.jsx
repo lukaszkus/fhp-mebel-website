@@ -36,7 +36,7 @@ const portfolioItems = [
 
 function Portfolio() {
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="Realizacje">
       <div className="container">
         <SectionHeading heading="Nasze realizacje" />
       </div>

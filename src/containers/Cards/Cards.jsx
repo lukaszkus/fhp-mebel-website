@@ -45,7 +45,7 @@ const cards = [
 
 function Cards() {
   return (
-    <section className="cards">
+    <section className="cards" id="Co robimy">
       <div className="container">
         <SectionHeading heading="Co robimy?" />
         <div className="cards__container">

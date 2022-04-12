@@ -11,7 +11,7 @@ function Navbar({ isOpen, toggle }) {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleScroll = () => {
-    setShowNavbar(window.scrollY > 150);
+    setShowNavbar(window.scrollY > 100);
   };
 
   useEffect(() => {
@@ -29,7 +29,8 @@ function Navbar({ isOpen, toggle }) {
         <div className="navbar__menu">
           <motion.ul
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__links">
+            className="navbar__links"
+          >
             {["Co robimy", "Realizacje", "O nas", "Kontakt"].map((item) => (
               <li key={`link-${item}`}>
                 <a href={`#${item}`} className="navbar__link">
@@ -40,7 +41,8 @@ function Navbar({ isOpen, toggle }) {
           </motion.ul>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            className="navbar__hamburger">
+            className="navbar__hamburger"
+          >
             <Hamburger
               size={28}
               color="#fff"

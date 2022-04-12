@@ -6,9 +6,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 3rem 2rem;
   color: $clr-grey-light;
-  border-radius: 10px;
+  // border-radius: 10px;
 
   &:hover {
     transition: 0.3s;
@@ -24,7 +24,7 @@
     font-weight: 400;
     text-align: center;
     line-height: 1.2;
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0;
     height: 100px;
 
     @include flex-center;
@@ -34,5 +34,6 @@
     font-size: 0.875rem;
     font-weight: 300;
     text-align: center;
+    width: 90%;
   }
 }
