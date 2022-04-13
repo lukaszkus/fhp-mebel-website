@@ -70,10 +70,6 @@
     &:hover {
       color: $clr-accent-light;
     }
-
-    &--active {
-      color: $clr-accent-light;
-    }
   }
 
   &__hamburger {
@@ -106,7 +102,7 @@
 
 .showNavbar {
   background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(0.5rem);
+  // backdrop-filter: blur(0.5rem);
   height: 60px;
 
   @include tablet {
