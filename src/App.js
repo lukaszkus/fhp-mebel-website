@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Header, Cards, Portfolio } from "./containers";
+import { Header, Cards, Portfolio, About } from "./containers";
 import { Navbar } from "./components";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       <Header />
       <Cards />
       <Portfolio />
+      <About />
     </>
   );
 }
