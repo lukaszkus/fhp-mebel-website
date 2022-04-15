@@ -1,0 +1,12 @@
+@import "../../styles/main.scss";
+
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $clr-grey;
+  padding: 140px 0;
+
+  &__cards {
+    background-color: $clr-accent-dark;
+  }
+}
