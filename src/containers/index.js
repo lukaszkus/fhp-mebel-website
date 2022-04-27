@@ -3,3 +3,4 @@ export { default as Cards } from "./Cards/Cards";
 export { default as Portfolio } from "./Portfolio/Portfolio";
 export { default as About } from "./About/About";
 export { default as Contact } from "./Contact/Contact";
+export { default as Footer } from "./Footer/Footer";
