@@ -29,6 +29,11 @@
     background-color: $clr-accent-dark;
     padding: 2rem;
     width: 250px;
+
+    &:hover {
+      transition: 0.3s;
+      background-color: $clr-accent-light;
+    }
   }
 
   &__icon {

@@ -7,7 +7,7 @@ import { SectionHeading, MapContainer } from "../../components";
 
 function Contact() {
   return (
-    <footer className="contact" id="Kontakt">
+    <section className="contact" id="Kontakt">
       <div className="container">
         <SectionHeading heading="Kontakt" />
         <div className="contact__cards">
@@ -44,7 +44,7 @@ function Contact() {
       <div className="contact__map">
         <MapContainer />
       </div>
-    </footer>
+    </section>
   );
 }
 
