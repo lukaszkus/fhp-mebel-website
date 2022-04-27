@@ -8,7 +8,8 @@
 
   &__container {
     display: grid;
-    // gap: 2rem;
+    padding-inline: 1rem;
+    gap: 1rem;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
